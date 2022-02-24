@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DependecyInjection.Api</name>
+    </assembly>
+    <members>
+        <member name="T:DependecyInjection.Api.Controllers.AddressController">
+            <summary>
+            Address Controller
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+        </member>
+        <member name="M:DependecyInjection.Api.Controllers.AddressController.#ctor(Microsoft.Extensions.Logging.ILogger{DependecyInjection.Api.Controllers.AddressController},MVCInjectionDependecy.Core.Services.IAddressService,AutoMapper.IMapper)">
+            <summary>Initializes a new instance of the <see cref="T:DependecyInjection.Api.Controllers.AddressController" /> class.</summary>
+            <param name="logger">The logger.</param>
+            <param name="addressService">The address service.</param>
+            <param name="mapper">The mapper.</param>
+        </member>
+        <member name="M:DependecyInjection.Api.Controllers.AddressController.GetAllAddress">
+            <summary>Gets all address.</summary>
+        </member>
+        <member name="M:DependecyInjection.Api.Controllers.AddressController.GetById(System.Int32)">
+            <summary>
+            Get address by identifier.
+            </summary>
+            <param name="idAddress">The identifier address.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DependecyInjection.Api.Controllers.AddressController.Create(DependecyInjection.Api.Models.AddressModel)">
+            <summary>
+            Creates the specified new address.
+            </summary>
+            <param name="newAddress">The new address.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DependecyInjection.Api.Controllers.AddressController.Update(DependecyInjection.Api.Models.AddressModel,System.Int32)">
+            <summary>
+            Updates the specified new address.
+            </summary>
+            <param name="newAddress">The new address.</param>
+            <param name="idAddress">The identifier address.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DependecyInjection.Api.Controllers.AddressController.Delete(System.Int32)">
+            <summary>
+            Deletes the specified identifier address.
+            </summary>
+            <param name="idAddress">The identifier address.</param>
+            <returns></returns>
+        </member>
+        <member name="T:DependecyInjection.Api.Helpers.Error">
+            <summary>
+            General object for wrap errors.
+            </summary>
+        </member>
+        <member name="P:DependecyInjection.Api.Helpers.Error.Code">
+            <summary>
+            Gets or sets the Code
+            Error code.
+            </summary>
+        </member>
+        <member name="P:DependecyInjection.Api.Helpers.Error.Message">
+            <summary>
+            Gets or sets the Message
+            Error message.
+            </summary>
+        </member>
+        <member name="M:DependecyInjection.Api.Helpers.Error.Equals(DependecyInjection.Api.Helpers.Error)">
+            <summary>
+            Returns true if Error instances are equal.
+            </summary>
+            <param name="other">Instance of Error to be compared.</param>
+            <returns>Boolean.</returns>
+        </member>
+        <member name="M:DependecyInjection.Api.Helpers.Error.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal.
+            </summary>
+            <param name="obj">Object to be compared.</param>
+            <returns>Boolean.</returns>
+        </member>
+        <member name="M:DependecyInjection.Api.Helpers.Error.GetHashCode">
+            <summary>
+            Gets the hash code.
+            </summary>
+            <returns>Hash code.</returns>
+        </member>
+        <member name="M:DependecyInjection.Api.Helpers.Error.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object.
+            </summary>
+            <returns>JSON string presentation of the object.</returns>
+        </member>
+        <member name="M:DependecyInjection.Api.Helpers.Error.ToString">
+            <summary>
+            Returns the string presentation of the object.
+            </summary>
+            <returns>String presentation of the object.</returns>
+        </member>
+        <member name="T:DependecyInjection.Api.Mappings.MappingProfile">
+            <summary>
+            Mappings models
+            </summary>
+            <seealso cref="T:AutoMapper.Profile" />
+        </member>
+        <member name="M:DependecyInjection.Api.Mappings.MappingProfile.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DependecyInjection.Api.Mappings.MappingProfile"/> class.
+            </summary>
+        </member>
+        <member name="M:DependecyInjection.Api.Mappings.MappingProfile.GeneralMappings">
+            <summary>
+            Generals the mappings.
+            </summary>
+        </member>
+        <member name="T:DependecyInjection.Api.Program">
+            <summary>
+            Class Program
+            </summary>
+        </member>
+        <member name="M:DependecyInjection.Api.Program.Main(System.String[])">
+            <summary>
+            Defines the entry point of the application.
+            </summary>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="M:DependecyInjection.Api.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Creates the host builder.
+            </summary>
+            <param name="args">The arguments.</param>
+            <returns></returns>
+        </member>
+        <member name="T:DependecyInjection.Api.Startup">
+            <summary>
+            Startup Application
+            </summary>
+        </member>
+        <member name="M:DependecyInjection.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DependecyInjection.Api.Startup"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+        </member>
+        <member name="P:DependecyInjection.Api.Startup.Configuration">
+            <summary>
+            Gets the configuration.
+            </summary>
+            <value>
+            The configuration.
+            </value>
+        </member>
+        <member name="M:DependecyInjection.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configures the services.
+            </summary>
+            <param name="services">The services.</param>
+        </member>
+        <member name="M:DependecyInjection.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Configures the specified application.
+            </summary>
+            <param name="app">The application.</param>
+            <param name="env">The env.</param>
+        </member>
+    </members>
+</doc>
